@@ -352,11 +352,6 @@
         <ondown>noop</ondown>
         <include>Sublist</include>
         <content>
-          <item id="0" description="LiveTV">
-            <visible>System.GetBool(pvrmanager.enabled)</visible>
-            <label>31502</label>
-            <onclick>ActivateWindow(PVR)</onclick>
-          </item>
           <item id="1" description="Weather">
             <visible>!Skin.HasSetting(Addons1)</visible>
             <label>8</label>
@@ -475,6 +470,10 @@
             <visible>!Skin.HasSetting(XBMC3)</visible>
             <label>446</label>
             <onclick>ActivateWindow(1112)</onclick>
+          </item>
+          <item id="80" description="Quit">
+            <label>$VAR[QuitLabel2</label>
+            <onclick>RunScript(C:/Utils/Scripts/on_off/turn_off_display_and_pause.py)</onclick>
           </item>
           <item id="9" description="Quit">
             <visible>!Skin.HasSetting(XBMC4) + IsEmpty(Skin.String(shutdown))</visible>
